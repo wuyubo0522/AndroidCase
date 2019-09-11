@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yb.autograph">
+    <!--这是集成模式使用的清单文件-->
+    <application>
+
+    </application>
+</manifest>

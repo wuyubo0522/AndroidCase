@@ -1,0 +1,26 @@
+ext {
+    // false:作为Lib组件存在， true:作为application存在，这个不建议改
+    isModuleRun = false
+
+    // 获取应用MD5签名模块
+    isAutographRun = true
+
+
+    android = [
+            compileSdkVersion: 29,
+            targetSdkVersion : 29,
+            minSdkVersion    : 23,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    version = [
+
+    ]
+
+    dependencies = [
+            // 阿里巴巴router框架
+            "router"         : "com.alibaba:arouter-api:1.4.1",
+            "router-compiler": "com.alibaba:arouter-compiler:1.2.2",
+    ]
+}
