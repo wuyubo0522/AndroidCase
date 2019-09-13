@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_25"
+        android:background="@drawable/theme_gradient_color"
         app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_size_60"
+        android:background="@drawable/theme_gradient_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
 
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Android案例与工具库"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_size_20" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_0"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dp_size_10"
+        android:layout_marginStart="@dimen/dp_size_15"
+        android:layout_marginEnd="@dimen/dp_size_15"
+        android:text="获取应用MD5值"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/theme_gradient_yellow"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

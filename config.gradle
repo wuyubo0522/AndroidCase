@@ -3,7 +3,7 @@ ext {
     isModuleRun = false
 
     // 获取应用MD5签名模块
-    isAutographRun = true
+    isAutographRun = false
 
 
     android = [

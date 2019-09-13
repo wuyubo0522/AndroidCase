@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_25"
+        android:background="@drawable/theme_gradient_color"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--查看签名页面-->
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_size_60"
+        android:background="@drawable/theme_gradient_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/sp_size_20"
+            android:paddingTop="@dimen/sp_size_20"
+            android:paddingEnd="@dimen/sp_size_20"
+            android:paddingBottom="@dimen/dp_size_15"
+            android:onClick="returnClick"
+            android:src="@mipmap/icon_return" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="获取应用MD5签名"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_size_20" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_lookup"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_size_60"
+        android:layout_marginStart="@dimen/dp_size_15"
+        android:hint="请输入包名或者应用名称"
+        app:layout_constraintEnd_toStartOf="@id/bt_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <Button
+        android:id="@+id/bt_search"
+        android:layout_width="@dimen/dp_size_80"
+        android:layout_height="@dimen/dp_size_60"
+        android:text="搜索"
+        android:onClick="SearchClick"
+        android:layout_marginEnd="@dimen/dp_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_app_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_lookup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

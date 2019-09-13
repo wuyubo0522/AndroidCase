@@ -3,6 +3,7 @@ if (rootProject.ext.isAutographRun) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
+    apply plugin: 'com.jakewharton.butterknife'
 }
 
 android {
@@ -45,7 +46,6 @@ android {
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
-            jniLibs.srcDirs = ['libs']
         }
     }
 
@@ -57,6 +57,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':common')
+    implementation project(path: ':common')
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 }
