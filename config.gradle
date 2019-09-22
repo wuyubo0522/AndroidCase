@@ -11,7 +11,7 @@ ext {
             targetSdkVersion : 29,
             minSdkVersion    : 23,
             versionCode      : 1,
-            versionName      : "1.0.0"
+            versionName      : "1.0.1"
     ]
 
     version = [
@@ -20,7 +20,26 @@ ext {
 
     dependencies = [
             // 阿里巴巴router框架
-            "router"         : "com.alibaba:arouter-api:1.4.1",
-            "router-compiler": "com.alibaba:arouter-compiler:1.2.2",
+            "router"                       : "com.alibaba:arouter-api:1.4.1",
+            "router-compiler"              : "com.alibaba:arouter-compiler:1.2.2",
+
+            // 小刀注解
+            "butterknife"                  : "com.jakewharton:butterknife:10.1.0",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:10.1.0",
+
+            // RecyclerView万能适配器
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46",
+
+            // immersionbar
+            "immersionbar"                 : "com.gyf.immersionbar:immersionbar:3.0.0",
+
+            // multidex
+            "multidex"                     : "com.android.support:multidex:1.0.3",
+
+            // Design
+            "material":"com.google.android.material:material:1.1.0-alpha10",
+
+            // constraintlayout约束布局
+            "constraintlayout":"androidx.constraintlayout:constraintlayout:1.1.3",
     ]
 }
