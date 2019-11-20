@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">common</string>
+    <string name="get_app_md5">获取应用的MD5</string>
+    <string name="observer_java">观察者模式Java</string>
+    <string name="observer_kotlin">观察者模式Kotlin</string>
 </resources>

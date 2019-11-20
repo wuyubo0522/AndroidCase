@@ -8,5 +8,12 @@ package com.yb.common;
  * Time: 10:27
  */
 public class ARouterManager {
+    /**
+     * 查看MD5界面
+     */
     public static final String AUTOGRAPH = "/autograph/AutographActivity";
+    /**
+     * 观察者模式Java案例
+     */
+    public static final String OBSERVER_JAVA = "/observer_java/ObserverJavaActivity";
 }

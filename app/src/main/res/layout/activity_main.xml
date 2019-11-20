@@ -7,13 +7,14 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_size_25"
+        android:layout_height="@dimen/dp25"
         android:background="@drawable/theme_gradient_color"
         app:layout_constraintTop_toTopOf="parent" />
+
     <RelativeLayout
         android:id="@+id/rl_tool"
         android:layout_width="0dp"
-        android:layout_height="@dimen/dp_size_60"
+        android:layout_height="@dimen/dp60"
         android:background="@drawable/theme_gradient_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +33,28 @@
     <Button
         android:id="@+id/bt_0"
         android:layout_width="0dp"
-        android:layout_height="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/dp_size_10"
-        android:layout_marginStart="@dimen/dp_size_15"
-        android:layout_marginEnd="@dimen/dp_size_15"
-        android:text="获取应用MD5值"
-        android:textColor="#FFFFFF"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp15"
         android:background="@drawable/theme_gradient_yellow"
-        app:layout_constraintTop_toBottomOf="@id/rl_tool"/>
+        android:text="@string/get_app_md5"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <Button
+        android:id="@+id/bt_1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:background="@drawable/theme_gradient_yellow"
+        android:text="@string/observer_java"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
