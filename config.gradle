@@ -14,8 +14,8 @@ ext {
             compileSdkVersion: 29,
             targetSdkVersion : 29,
             minSdkVersion    : 23,
-            versionCode      : 2,
-            versionName      : "1.0.2"
+            versionCode      : 3,
+            versionName      : "1.0.3"
     ]
 
     version = [
@@ -24,7 +24,7 @@ ext {
 
     dependencies = [
             // 阿里巴巴router框架
-            "router"                       : "com.alibaba:arouter-api:1.4.1",
+            "router"                       : "com.alibaba:arouter-api:1.5.0",
             "router-compiler"              : "com.alibaba:arouter-compiler:1.2.2",
 
             // 小刀注解

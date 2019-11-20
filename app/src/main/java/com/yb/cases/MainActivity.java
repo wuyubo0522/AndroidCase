@@ -8,7 +8,6 @@ import com.gyf.immersionbar.ImmersionBar;
 import com.yb.common.ARouterManager;
 import com.yb.common.base_mvc.BaseActivityC;
 
-import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -17,9 +16,6 @@ import butterknife.OnClick;
  * @author 裕博
  */
 public class MainActivity extends BaseActivityC {
-
-    @BindView(R.id.bt_0)
-    Button bt0;
 
     @Override
     public int getLayoutId() {
@@ -30,10 +26,9 @@ public class MainActivity extends BaseActivityC {
     public void init() {
         // 设置沉浸式状态
         ImmersionBar.with(this).init();
-
     }
 
-    @OnClick({R.id.bt_0, R.id.bt_1})
+    @OnClick({R.id.bt_0, R.id.bt_1,R.id.bt_2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_0:
@@ -43,6 +38,10 @@ public class MainActivity extends BaseActivityC {
             case R.id.bt_1:
                 // 在主App中跳转到观察者模式Java案例中
                 ARouter.getInstance().build(ARouterManager.OBSERVER_JAVA).navigation();
+                break;
+            case R.id.bt_2:
+                // 在主App中跳转到观察者模式kotlin案例中
+                ARouter.getInstance().build(ARouterManager.OBSERVER_KOTLIN).navigation();
                 break;
             default:
                 break;

@@ -16,4 +16,8 @@ public class ARouterManager {
      * 观察者模式Java案例
      */
     public static final String OBSERVER_JAVA = "/observer_java/ObserverJavaActivity";
+    /**
+     * 观察者模式Kotlin案例
+     */
+    public static final String OBSERVER_KOTLIN = "/observer_kotlin/ObserverKotlinActivity";
 }

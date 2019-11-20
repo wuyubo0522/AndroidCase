@@ -1,1 +1,1 @@
-include ':app', ':common', ':autograph', ':observer_java'
+include ':app', ':common', ':autograph', ':observer_java', ':observer_kotlin'

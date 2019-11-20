@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -29,8 +29,6 @@ import com.yb.common.base_mvc.BaseActivityC;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.OnClick;
 
 /**
  * 类说明：获取前面的Activity
@@ -219,44 +217,6 @@ public class AutographActivity extends BaseActivityC {
         return null;
     }
 
-    @SuppressLint("InvalidR2Usage")
-    @OnClick({R2.id.iv_return, R2.id.bt_search})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R2.id.iv_return:
-                // 返回上一个页面
-                finish();
-                break;
-            case R2.id.bt_search:
-                String etLookupStr = etLookup.getText().toString();
-                if (TextUtils.isEmpty(etLookupStr)) {
-                    showToastShort("搜索值不能为空！");
-                } else {
-                    if (btSearch.getText().toString().equals(this.getResources().getString(R.string.search))) {
-                        // 按钮内的值是搜索
-                        search(etLookupStr);
-                        btSearch.setText(R.string.cancel);
-                    } else if (btSearch.getText().toString().equals(this.getResources().getString(R.string.cancel))) {
-                        // 按钮内的值是取消,清空搜索集合里面的数据
-                        searchData.clear();
-                        // 判断应用信息集合里面是否有数据，如果没有数据重新获取，减少不必要的消耗
-                        if (appInfo.size() > 0) {
-                            appInfoAdapter.setNewData(appInfo);
-                        } else {
-                            getPackInfo();
-                        }
-                        btSearch.setText(R.string.search);
-                        etLookup.setText("");
-                    }
-                    // 隐藏软件盘
-                    hideInput();
-                }
-                break;
-            default:
-                break;
-        }
-    }
-
     /**
      * 搜索相关的方法
      */
@@ -276,11 +236,16 @@ public class AutographActivity extends BaseActivityC {
      * 隐藏键盘
      */
     protected void hideInput() {
-        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        InputMethodManager imm = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CUPCAKE) {
+            imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        }
         View v = getWindow().peekDecorView();
         if (null != v) {
             assert imm != null;
-            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CUPCAKE) {
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+            }
         }
     }
 }

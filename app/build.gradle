@@ -59,16 +59,19 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    if (!rootProject.ext.isAutographRun){
-        implementation project(path: ':autograph')
-    }
-    if (!rootProject.ext.isObserverJavaRun){
-        implementation project(path: ':observer_java')
-    }
     implementation project(path: ':common')
     // 阿里巴巴路由依赖
     implementation rootProject.ext.dependencies["router"]
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
     // 小刀注解
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    if (!rootProject.ext.isAutographRun){
+        implementation project(path: ':autograph')
+    }
+    if (!rootProject.ext.isObserverJavaRun){
+        implementation project(path: ':observer_java')
+    }
+    if (!rootProject.ext.isObserverKotlinRun){
+        implementation project(path: ':observer_kotlin')
+    }
 }
