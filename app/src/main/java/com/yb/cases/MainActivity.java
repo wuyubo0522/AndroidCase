@@ -43,6 +43,10 @@ public class MainActivity extends BaseActivityC {
                 // 在主App中跳转到观察者模式kotlin案例中
                 ARouter.getInstance().build(ARouterManager.OBSERVER_KOTLIN).navigation();
                 break;
+            case R.id.bt_3:
+                // 在主App中跳转到多种底部导航栏多种实现的方式
+                ARouter.getInstance().build(ARouterManager.BOTTOM_NAVIGATION).navigation();
+                break;
             default:
                 break;
         }

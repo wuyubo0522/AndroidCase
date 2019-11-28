@@ -31,6 +31,20 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/bt_3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:background="@drawable/theme_gradient_yellow"
+        android:text="@string/bottom_navigation"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <Button
         android:id="@+id/bt_2"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
@@ -42,7 +56,7 @@
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+        app:layout_constraintTop_toBottomOf="@id/bt_3" />
 
     <Button
         android:id="@+id/bt_1"

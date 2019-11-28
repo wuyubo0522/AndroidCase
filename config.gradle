@@ -8,6 +8,8 @@ ext {
     isObserverJavaRun = false
     // 观察者模式Kotlin版本
     isObserverKotlinRun = false
+    // 底部导航栏的多种实现
+    isBottomNavigation = false
 
 
     android = [

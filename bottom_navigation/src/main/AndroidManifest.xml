@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yb.bottom_navigation">
+
+    <application>
+        <activity android:name=".ui.NavigationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.StyleFirstActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.StyleSecondActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.StyleThirdActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

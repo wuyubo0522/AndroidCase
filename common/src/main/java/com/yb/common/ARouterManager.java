@@ -20,4 +20,8 @@ public class ARouterManager {
      * 观察者模式Kotlin案例
      */
     public static final String OBSERVER_KOTLIN = "/observer_kotlin/ObserverKotlinActivity";
+    /**
+     * 多种底部导航栏实现界面
+     */
+    public static final String BOTTOM_NAVIGATION = "/bottom_navigation/NavigationActivity";
 }
