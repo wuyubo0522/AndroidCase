@@ -1,5 +1,6 @@
 package com.yb.bottom_navigation.ui
 
+import com.yb.bottom_navigation.R
 import com.yb.common.base_mvc.BaseActivityC
 
 /**
@@ -8,11 +9,12 @@ import com.yb.common.base_mvc.BaseActivityC
  * Time: 2019/11/23 17:52
  */
 class StyleThirdActivity : BaseActivityC(){
-    override fun init() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.activity_style_third
+    }
+
+    override fun init() {
+
     }
 }
