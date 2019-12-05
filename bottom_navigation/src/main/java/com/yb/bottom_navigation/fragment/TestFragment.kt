@@ -1,6 +1,8 @@
 package com.yb.bottom_navigation.fragment
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import com.yb.bottom_navigation.R
 import com.yb.common.base_mvc.BaseFragmentC
 import kotlinx.android.synthetic.main.fragment_test.*
@@ -14,11 +16,10 @@ import kotlinx.android.synthetic.main.fragment_test.*
 class TestFragment : BaseFragmentC() {
 
     companion object{
-        val TEST_SHOW_TEXT: String? = "test"
         fun newInstance(param1: String): TestFragment {
             val fragment = TestFragment()
             val args = Bundle()
-            args.putString(TEST_SHOW_TEXT, param1)
+            args.putString("test", param1)
             fragment.arguments = args
             return fragment
         }
@@ -29,7 +30,12 @@ class TestFragment : BaseFragmentC() {
     }
 
     override fun init() {
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // 显示参数
-        mTvMessage.text = arguments?.getString(TEST_SHOW_TEXT)
+        mTvTestMessage?.text = arguments?.getString("test")
     }
 }

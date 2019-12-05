@@ -1,5 +1,6 @@
 package com.yb.bottom_navigation.adapter
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -10,9 +11,15 @@ import androidx.fragment.app.FragmentPagerAdapter
  * @author 裕博
  * Time: 2019/11/30 16:58
  */
-internal class NavigationFragmentPagerAdapter(fm: FragmentManager?, list: List<Fragment>?)
-    : FragmentPagerAdapter(fm!!,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-    private val mList: List<Fragment>? = list
+internal class NavigationFragmentPagerAdapter(fm: FragmentManager?, list: MutableList<Fragment>?)
+    : FragmentPagerAdapter(fm!!, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    private var mList: List<Fragment>? = null
+
+    init {
+        mList = list
+        Log.e("Adapter", "=======================${mList.toString()}")
+    }
+
     override fun getItem(position: Int): Fragment {
         return mList?.get(position)!!
     }

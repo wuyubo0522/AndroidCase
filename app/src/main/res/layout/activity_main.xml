@@ -31,7 +31,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/bt_3"
+        android:id="@+id/mBtn3"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
         android:layout_marginTop="@dimen/dp10"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@id/rl_tool" />
 
     <Button
-        android:id="@+id/bt_2"
+        android:id="@+id/mBtn2"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
         android:layout_marginTop="@dimen/dp10"
@@ -56,10 +56,10 @@
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_3" />
+        app:layout_constraintTop_toBottomOf="@id/mBtn3" />
 
     <Button
-        android:id="@+id/bt_1"
+        android:id="@+id/mBtn1"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
         android:layout_marginTop="@dimen/dp10"
@@ -70,10 +70,10 @@
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_2" />
+        app:layout_constraintTop_toBottomOf="@id/mBtn2" />
 
     <Button
-        android:id="@+id/bt_0"
+        android:id="@+id/mBtn0"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
         android:layout_marginStart="@dimen/dp15"
@@ -84,5 +84,5 @@
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_1" />
+        app:layout_constraintTop_toBottomOf="@id/mBtn1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

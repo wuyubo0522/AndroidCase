@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin:'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin:'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -63,8 +66,9 @@ dependencies {
     // 阿里巴巴路由依赖
     implementation rootProject.ext.dependencies["router"]
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
-    // 小刀注解
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    if (!rootProject.ext.isBottomNavigation) {
+        implementation project(path: ':bottom_navigation')
+    }
     if (!rootProject.ext.isAutographRun){
         implementation project(path: ':autograph')
     }
