@@ -1,1 +1,1 @@
-include ':app', ':common', ':autograph', ':observer_java', ':observer_kotlin', ':bottom_navigation'
+include ':app', ':common', ':autograph', ':observer_java', ':observer_kotlin', ':bottom_navigation', ':recycleviewdemo'
