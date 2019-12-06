@@ -66,6 +66,9 @@ dependencies {
     // 阿里巴巴路由依赖
     implementation rootProject.ext.dependencies["router"]
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
+    if (!rootProject.ext.isRecycleViewRun){
+        implementation project(path: ':recycleviewdemo')
+    }
     if (!rootProject.ext.isBottomNavigation) {
         implementation project(path: ':bottom_navigation')
     }

@@ -1,12 +1,19 @@
 package com.yb.recycleview_demo
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.yb.common.ARouterManager
+import com.yb.common.base_mvc.BaseActivityC
 
-class RecycleViewActivity : AppCompatActivity() {
+/**
+ * 类说明：RecycleView的多种组件
+ * @author 裕博
+ */
+@Route(path = ARouterManager.RECYCLE_VIEW_DEOM)
+class RecycleViewActivity : BaseActivityC() {
+    override fun init() {
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recycle_view)
+    override fun getLayoutId(): Int {
+        return R.layout.activity_recycle_view
     }
 }

@@ -1,19 +1,36 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+// 控制组件模式和集成模式
+if (rootProject.ext.isRecycleViewRun) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin:'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin:'kotlin-android-extensions'
 android {
-    compileSdkVersion 29
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion "29.0.2"
-
-
     defaultConfig {
-        applicationId "com.yb.recycleview_demo"
-        minSdkVersion 23
-        targetSdkVersion 29
+        if(rootProject.ext.isRecycleViewRun){
+            applicationId "com.yb.recycleview_demo"
+        }
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -23,15 +40,24 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (rootProject.ext.isObserverKotlinRun) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':common')
+    kapt rootProject.ext.dependencies["router-compiler"]
 }

@@ -24,4 +24,8 @@ public class ARouterManager {
      * 多种底部导航栏实现界面
      */
     public static final String BOTTOM_NAVIGATION = "/bottom_navigation/NavigationActivity";
+    /**
+     * RecycleView的多种应用
+     */
+    public static final String RECYCLE_VIEW_DEOM = "/recycle_view/RecycleViewActivity";
 }

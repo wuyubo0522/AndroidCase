@@ -1,6 +1,5 @@
 package com.yb.cases
 
-import android.util.Log
 import com.alibaba.android.arouter.launcher.ARouter
 import com.gyf.immersionbar.ImmersionBar
 import com.yb.common.ARouterManager
@@ -34,6 +33,10 @@ class MainActivity : BaseActivityC() {
         mBtn3?.setOnClickListener {
             // 在主App中跳转到多种底部导航栏多种实现的方式
             ARouter.getInstance().build(ARouterManager.BOTTOM_NAVIGATION).navigation()
+        }
+        mBtn4?.setOnClickListener {
+            // 在主App中跳转到RecycleView的多种应用的页面
+            ARouter.getInstance().build(ARouterManager.RECYCLE_VIEW_DEOM).navigation()
         }
     }
 }

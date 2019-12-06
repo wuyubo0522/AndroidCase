@@ -10,14 +10,16 @@ ext {
     isObserverKotlinRun = false
     // 底部导航栏的多种实现
     isBottomNavigation = false
+    // RecycleView的多种使用
+    isRecycleViewRun = false
 
 
     android = [
             compileSdkVersion: 29,
             targetSdkVersion : 29,
             minSdkVersion    : 23,
-            versionCode      : 3,
-            versionName      : "1.0.3"
+            versionCode      : 4,
+            versionName      : "1.0.4"
     ]
 
     version = [

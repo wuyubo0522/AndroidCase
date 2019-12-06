@@ -31,6 +31,21 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/mBtn4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:background="@drawable/theme_gradient_yellow"
+        android:text="@string/recycle_view"
+        android:textAllCaps="false"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <Button
         android:id="@+id/mBtn3"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp48"
@@ -42,7 +57,7 @@
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+        app:layout_constraintTop_toBottomOf="@id/mBtn4" />
 
     <Button
         android:id="@+id/mBtn2"
@@ -53,6 +68,7 @@
         android:layout_marginEnd="@dimen/dp15"
         android:background="@drawable/theme_gradient_yellow"
         android:text="@string/observer_kotlin"
+        android:textAllCaps="false"
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +83,7 @@
         android:layout_marginEnd="@dimen/dp15"
         android:background="@drawable/theme_gradient_yellow"
         android:text="@string/observer_java"
+        android:textAllCaps="false"
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
