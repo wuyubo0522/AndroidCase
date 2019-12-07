@@ -3,7 +3,7 @@
     package="com.yb.recycleview_demo">
 
     <application>
-        <activity android:name=".RecycleViewActivity"
+        <activity android:name=".main.RecycleViewActivity"
             android:screenOrientation="portrait"/>
     </application>
 

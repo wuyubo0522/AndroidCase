@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecycleViewActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RecycleView的多种应用组件"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp25"
+        android:background="@drawable/theme_gradient_color"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/theme_gradient_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_toolbar">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="RecycleView的多种应用组件"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dp20" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mBtn0"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="单行列表(1列1行)"
+        android:textAllCaps="false"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+
+    <Button
+        android:id="@+id/mBtn1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="多行列表(2列2行)"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtn0" />
+
+    <Button
+        android:id="@+id/mBtn2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="横向列表"
+        android:textAllCaps="false"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtn1" />
+
+    <Button
+        android:id="@+id/mBtn3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="瀑布流布局"
+        android:textAllCaps="false"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtn2" />
+
+    <Button
+        android:id="@+id/mBtn4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="标签不规则列表"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtn3" />
+
+    <Button
+        android:id="@+id/mBtn5"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp15"
+        android:text="翻牌布局列表"
+        android:background="@drawable/theme_gradient_violet"
+        android:textColor="@color/color_FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtn4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

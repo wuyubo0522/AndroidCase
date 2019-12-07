@@ -14,7 +14,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
         <activity
-            android:name=".RecycleViewActivity"
+            android:name=".main.RecycleViewActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
