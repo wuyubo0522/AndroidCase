@@ -6,12 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.ObserverJavaActivity">
 
+    <include
+        android:id="@+id/view_top_bar"
+        layout="@layout/view_top_bar"/>
+
     <Button
         android:id="@+id/btn"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/dp50"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="跳转第二个页面"/>
+        android:text="跳转第二个页面"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_bar" />
 
     <TextView
         android:id="@+id/tv_prompt"

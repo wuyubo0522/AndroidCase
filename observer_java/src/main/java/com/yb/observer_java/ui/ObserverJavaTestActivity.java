@@ -1,7 +1,8 @@
 package com.yb.observer_java.ui;
 
-import android.view.View;
+import android.widget.TextView;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.yb.common.base_mvc.BaseActivityC;
 import com.yb.observer_java.R;
 import com.yb.observer_java.observer.ObserverManager;
@@ -19,6 +20,9 @@ public class ObserverJavaTestActivity extends BaseActivityC {
 
     @Override
     public void init() {
+        ImmersionBar.with(this).init();
+        TextView mTitle = findViewById(R.id.mTvTitle);
+        mTitle.setText("观察者模式Java版测试界面");
         findViewById(R.id.btn).setOnClickListener(v -> {
             // 将这个数据传输到第一个页面
             ObserverManager.getInstance().notifyObserver("第一个页面更新数据啦！！！");
