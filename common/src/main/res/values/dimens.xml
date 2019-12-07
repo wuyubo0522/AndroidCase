@@ -10,4 +10,6 @@
     <dimen name="dp48">48dp</dimen>
     <dimen name="dp50">50dp</dimen>
     <dimen name="dp60">60dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="dp85">85dp</dimen>
 </resources>
