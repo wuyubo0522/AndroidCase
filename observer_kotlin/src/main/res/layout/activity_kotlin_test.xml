@@ -5,10 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/view_top_bar"
+        android:id="@+id/view_top_bar"/>
+
     <Button
         android:id="@+id/mBtnSend"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_bar"
         android:text="发送数据到第一个页面"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

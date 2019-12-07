@@ -4,11 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/view_top_bar"
+        android:id="@+id/view_top_bar"/>
+
     <Button
         android:id="@+id/mBtn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp50"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_bar"
         android:text="跳转第二个页面"/>
 
     <TextView

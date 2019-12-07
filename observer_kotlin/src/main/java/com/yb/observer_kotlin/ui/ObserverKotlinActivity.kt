@@ -1,7 +1,8 @@
 package com.yb.observer_kotlin.ui
 
-import android.util.Log
+import android.widget.TextView
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.gyf.immersionbar.ImmersionBar
 import com.yb.common.ARouterManager
 import com.yb.common.base_mvc.BaseActivityC
 import com.yb.observer_kotlin.R
@@ -21,6 +22,8 @@ class ObserverKotlinActivity :BaseActivityC(),ObserverListener{
     }
 
     override fun init() {
+        ImmersionBar.with(this).init()
+        findViewById<TextView>(R.id.mTvTitle).text = "观察者模式kotlin版本"
         // 注册观察者
         ObserverManager.instance.add(this)
         // 跳转到第二个页面
@@ -30,7 +33,6 @@ class ObserverKotlinActivity :BaseActivityC(),ObserverListener{
     }
 
     override fun observerUpData(count: String) {
-        Log.e("Kotlin","===================执行成功")
         mTvPrompt.text = count
     }
 
