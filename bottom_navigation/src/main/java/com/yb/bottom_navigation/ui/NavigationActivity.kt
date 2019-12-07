@@ -1,6 +1,8 @@
 package com.yb.bottom_navigation.ui
 
+import android.widget.TextView
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.gyf.immersionbar.ImmersionBar
 import com.yb.bottom_navigation.R
 import com.yb.common.ARouterManager
 import com.yb.common.base_mvc.BaseActivityC
@@ -19,6 +21,8 @@ class NavigationActivity : BaseActivityC() {
     }
 
     override fun init() {
+        ImmersionBar.with(this).init()
+        findViewById<TextView>(R.id.mTvTitle).text = "底部导航栏多种实现组件"
         mBtnFirst.setOnClickListener {
             jumpActivity(StyleFirstActivity::class.java)
         }

@@ -6,13 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.NavigationActivity">
 
+    <include layout="@layout/view_top_bar"
+        android:id="@+id/view_top_bar"/>
+
     <Button
         android:id="@+id/mBtnFirst"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_bar"
         android:text="第一种样式" />
     <Button
         android:id="@+id/mBtnSecond"
