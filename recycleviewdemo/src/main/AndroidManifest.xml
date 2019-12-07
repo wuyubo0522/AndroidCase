@@ -5,6 +5,18 @@
     <application>
         <activity android:name=".main.RecycleViewActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.SingleRowActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.MultipleRowsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.TransverseActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.WaterfallActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.LabelActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.FlopActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

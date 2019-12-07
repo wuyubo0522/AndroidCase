@@ -1,6 +1,7 @@
-package com.yb.recycleview_demo
+package com.yb.recycleview_demo.ui
 
 import com.yb.common.base_mvc.BaseActivityC
+import com.yb.recycleview_demo.R
 
 /**
  * 类说明：单行列表界面
@@ -9,10 +10,9 @@ import com.yb.common.base_mvc.BaseActivityC
  */
 class SingleRowActivity :BaseActivityC(){
     override fun init() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.activity_single_row
     }
 }

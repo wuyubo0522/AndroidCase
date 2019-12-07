@@ -4,31 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/view_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp25"
-        android:background="@drawable/theme_gradient_color"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
-        android:id="@+id/rl_tool"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/dp60"
-        android:background="@drawable/theme_gradient_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_toolbar">
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="RecycleView的多种应用组件"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/dp20" />
-    </RelativeLayout>
+    <include
+        android:id="@+id/view_top_bar"
+        layout="@layout/view_top_bar"/>
 
     <Button
         android:id="@+id/mBtn0"
@@ -38,12 +16,11 @@
         android:layout_marginStart="@dimen/dp15"
         android:layout_marginEnd="@dimen/dp15"
         android:text="单行列表(1列1行)"
-        android:textAllCaps="false"
         android:background="@drawable/theme_gradient_violet"
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_tool" />
+        app:layout_constraintTop_toBottomOf="@id/view_top_bar" />
 
     <Button
         android:id="@+id/mBtn1"
@@ -67,7 +44,6 @@
         android:layout_marginStart="@dimen/dp15"
         android:layout_marginEnd="@dimen/dp15"
         android:text="横向列表"
-        android:textAllCaps="false"
         android:background="@drawable/theme_gradient_violet"
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +58,6 @@
         android:layout_marginStart="@dimen/dp15"
         android:layout_marginEnd="@dimen/dp15"
         android:text="瀑布流布局"
-        android:textAllCaps="false"
         android:background="@drawable/theme_gradient_violet"
         android:textColor="@color/color_FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
